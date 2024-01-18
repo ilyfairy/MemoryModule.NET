@@ -165,6 +165,11 @@ namespace MemoryModule
                 NativeAssemblyImpl.GetSymbol(_handle, name));
         }
 
+        public unsafe IntPtr GetDelegate(string name)
+        {
+            return NativeAssemblyImpl.GetSymbol(_handle, name);
+        }
+
         public static event NativeResolveEventHandler AssemblyResolve;
 
         protected static bool FreeLibraryHandle(IntPtr handle)
